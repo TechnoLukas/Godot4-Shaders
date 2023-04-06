@@ -1,11 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1528p12jaaw1"]
+[gd_scene load_steps=10 format=3 uid="uid://cvjcdr57r7qbg"]
 
+[ext_resource type="Script" path="res://changescene.gd" id="1_fjke5"]
 [ext_resource type="Shader" path="res://shaders/shader.gdshader" id="1_iss6j"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_rmidt"]
+[sub_resource type="Theme" id="Theme_bhqtq"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6t0se"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c5uym"]
 shader = ExtResource("1_iss6j")
 
-[node name="Control" type="Control"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjlwb"]
+bg_color = Color(0, 0, 0, 0.184314)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i73js"]
+shader = ExtResource("1_iss6j")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_qkgb5"]
+
+[sub_resource type="Theme" id="Theme_bnp8s"]
+Label/font_sizes/font_size = 18
+
+[node name="main" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,10 +30,163 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_rmidt")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_bhqtq")
+color = Color(0.196078, 0.196078, 0.196078, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/VBoxContainer"]
+y_sort_enabled = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 40
+
+[node name="button1" type="ColorRect" parent="ColorRect/VBoxContainer/HBoxContainer"]
+material = SubResource("CanvasItemMaterial_6t0se")
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.196078, 0.196078, 0.196078, 1)
+
+[node name="titlebar" type="ColorRect" parent="ColorRect/VBoxContainer/HBoxContainer/button1"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 80.0
+grow_horizontal = 2
+color = Color(0.133333, 0.133333, 0.133333, 1)
+
+[node name="title" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer/button1/titlebar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "No01_CircleBlur"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect/VBoxContainer/HBoxContainer/button1"]
+material = SubResource("ShaderMaterial_c5uym")
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 80.0
+offset_bottom = 424.0
+grow_horizontal = 2
+
+[node name="button" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer/button1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_vjlwb")
+script = ExtResource("1_fjke5")
+scene = "res://No01_CircleBlur.tscn"
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect/VBoxContainer/HBoxContainer/button1"]
+visible = false
+material = SubResource("ShaderMaterial_i73js")
+position = Vector2(170.625, 192.625)
+scale = Vector2(294.75, 198.75)
+texture = SubResource("CanvasTexture_qkgb5")
+
+[node name="button2" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="button3" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="button4" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="button5" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ColorRect/VBoxContainer"]
+y_sort_enabled = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 40
+
+[node name="button1" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="button2" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="button3" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="button4" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="button5" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="ColorRect/VBoxContainer"]
+y_sort_enabled = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 40
+
+[node name="button1" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="button2" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="button3" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="button4" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="button5" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 12.0
+offset_top = 7.0
+offset_right = 221.0
+offset_bottom = 36.0
+size_flags_horizontal = 4
+theme = SubResource("Theme_bnp8s")
+text = "release date: 06.04.2023"
+
+[connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/button1/button" to="ColorRect/VBoxContainer/HBoxContainer/button1/button" method="_on_pressed"]
