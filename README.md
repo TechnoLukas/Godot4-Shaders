@@ -7,7 +7,7 @@
 
 Scene Swicher
 
-![](images/Sceneswitcher.png)
+![](images/SceneSwitcher.png)
 
  
 
