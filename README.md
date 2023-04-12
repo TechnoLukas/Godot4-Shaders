@@ -15,7 +15,7 @@ Added new shader called **No04_ColorCirclePop** and resized text so long names c
 
 Scene Swicher
 
-![](images/Sceneswitcher.png)
+![](images/SceneSwitcher.png)
 
 ## Added on 4.4.2023
 
