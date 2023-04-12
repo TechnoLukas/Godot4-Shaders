@@ -8,6 +8,10 @@
 
 config_version=5
 
+[android]
+
+modules="org/godotengine/godot/GodotMidiIn"
+
 [application]
 
 config/name="Godot4Shaders"

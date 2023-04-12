@@ -1,22 +1,26 @@
-[gd_scene load_steps=10 format=3 uid="uid://cvjcdr57r7qbg"]
+[gd_scene load_steps=12 format=3 uid="uid://dqqxtntq4v46n"]
 
+[ext_resource type="Shader" path="res://shaders/shader_No1_Small.gdshader" id="1_50gw8"]
 [ext_resource type="Script" path="res://changescene.gd" id="1_fjke5"]
-[ext_resource type="Shader" path="res://shaders/shader.gdshader" id="1_iss6j"]
+[ext_resource type="Shader" path="res://shaders/shader_No4_Small.gdshader" id="3_u1fnb"]
 
 [sub_resource type="Theme" id="Theme_bhqtq"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6t0se"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_c5uym"]
-shader = ExtResource("1_iss6j")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c72jh"]
+shader = ExtResource("1_50gw8")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjlwb"]
 bg_color = Color(0, 0, 0, 0.184314)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_i73js"]
-shader = ExtResource("1_iss6j")
+shader = ExtResource("1_50gw8")
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_qkgb5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ja7cp"]
+shader = ExtResource("3_u1fnb")
 
 [sub_resource type="Theme" id="Theme_bnp8s"]
 Label/font_sizes/font_size = 18
@@ -79,13 +83,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 28
 text = "No01_CircleBlur"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ColorRect" type="ColorRect" parent="ColorRect/VBoxContainer/HBoxContainer/button1"]
-material = SubResource("ShaderMaterial_c5uym")
+material = SubResource("ShaderMaterial_c72jh")
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -102,7 +106,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_vjlwb")
 script = ExtResource("1_fjke5")
-scene = "res://No01_CircleBlur.tscn"
+scene = "res://scenes/No01_CircleBlur.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect/VBoxContainer/HBoxContainer/button1"]
 visible = false
@@ -122,6 +126,46 @@ size_flags_horizontal = 3
 [node name="button4" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="titlebar" type="ColorRect" parent="ColorRect/VBoxContainer/HBoxContainer/button4"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 80.0
+grow_horizontal = 2
+color = Color(0.133333, 0.133333, 0.133333, 1)
+
+[node name="title" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer/button4/titlebar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "No04_ColorCirclePop"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect/VBoxContainer/HBoxContainer/button4"]
+material = SubResource("ShaderMaterial_ja7cp")
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 80.0
+offset_bottom = 424.0
+grow_horizontal = 2
+
+[node name="button" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer/button4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_vjlwb")
+script = ExtResource("1_fjke5")
+scene = "res://scenes/No04_ColorCirclePop.tscn"
 
 [node name="button5" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -187,6 +231,7 @@ offset_right = 221.0
 offset_bottom = 36.0
 size_flags_horizontal = 4
 theme = SubResource("Theme_bnp8s")
-text = "release date: 06.04.2023"
+text = "release date: 12.04.2023"
 
 [connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/button1/button" to="ColorRect/VBoxContainer/HBoxContainer/button1/button" method="_on_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/button4/button" to="ColorRect/VBoxContainer/HBoxContainer/button4/button" method="_on_pressed"]

@@ -3,13 +3,19 @@
  https://github.com/TechnoLukas/Godot4-Shaders
  Here i will add and commit step by step procces of creating Godot shaders.
 
+## Added on 12.4.2023
+
+Added new shader called **No04_ColorCirclePop** and resized text so long names can fit.
+
+![](images/Sceneswitcher2.png)
+
+![](images/No04_ColorCirclePop.png)
+
 ## Added on 6.4.2023
 
 Scene Swicher
 
 ![](images/Sceneswitcher.png)
-
- 
 
 ## Added on 4.4.2023
 

@@ -1,13 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://c1528p12jaaw1"]
+[gd_scene load_steps=5 format=3 uid="uid://d332fe1w2h4k8"]
 
-[ext_resource type="Script" path="res://changescene.gd" id="1_3bpq8"]
-[ext_resource type="Shader" path="res://shaders/shader.gdshader" id="1_iss6j"]
+[ext_resource type="Script" path="res://changescene.gd" id="1_dxlxq"]
+[ext_resource type="Shader" path="res://shaders/shader_No1_Big.gdshader" id="2_h4qve"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eg16j"]
 bg_color = Color(0.564706, 0, 0.0117647, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_x8c81"]
-shader = ExtResource("1_iss6j")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qibtv"]
+shader = ExtResource("2_h4qve")
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -60,18 +60,17 @@ offset_bottom = 30.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_eg16j")
-script = ExtResource("1_3bpq8")
+script = ExtResource("1_dxlxq")
 scene = "res://main.tscn"
 
 [node name="ColorRect" type="ColorRect" parent="ColorRect"]
-material = SubResource("ShaderMaterial_x8c81")
+material = SubResource("ShaderMaterial_qibtv")
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = 15
 anchor_right = 1.0
-offset_left = 300.0
+anchor_bottom = 1.0
 offset_top = 80.0
-offset_right = -300.0
-offset_bottom = 1400.0
 grow_horizontal = 2
+grow_vertical = 2
 
 [connection signal="pressed" from="ColorRect/titlebar/ColorRect" to="ColorRect/titlebar/ColorRect" method="_on_pressed"]
