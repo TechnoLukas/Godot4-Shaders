@@ -7,7 +7,7 @@
 
 Added new shader called **No04_ColorCirclePop** and resized text so long names can fit.
 
-![](images/Sceneswitcher2.png)
+![](images/SceneSwitcher2.png)
 
 ![](images/No04_ColorCirclePop.png)
 
