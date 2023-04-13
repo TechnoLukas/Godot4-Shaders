@@ -15,7 +15,7 @@ vec3 sdfCircle(vec2 uv, float r) {
 
 void fragment() {
 
- vec2 uv = UV;
+ 	vec2 uv = UV;
 	uv.y=uv.y-0.5;
 	uv.x=uv.x-0.5;
 	vec3 col = sdfCircle(uv, abs(cos(TIME)*0.5)); // Call this function on each pixel to check if the coordinate lies inside or outside of the circle
