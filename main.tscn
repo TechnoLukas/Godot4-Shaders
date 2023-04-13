@@ -277,7 +277,7 @@ offset_right = 221.0
 offset_bottom = 36.0
 size_flags_horizontal = 4
 theme = SubResource("Theme_bnp8s")
-text = "release date: 12.04.2023"
+text = "release date: 13.04.2023"
 
 [connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/button1/button" to="ColorRect/VBoxContainer/HBoxContainer/button1/button" method="_on_pressed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/button4/button" to="ColorRect/VBoxContainer/HBoxContainer/button4/button" method="_on_pressed"]

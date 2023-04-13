@@ -7,9 +7,9 @@
 
 Added new shader called **No05_CircleColorSlidep**
 
-![](images/SceneSwitcher3.png)
+![](images/mainscene2.gif)
 
-![](images/No05_CircleColorSlide.png)
+![](images/No05_CircleColorSlide.gif)
 
 ## Added on 12.4.2023
 
