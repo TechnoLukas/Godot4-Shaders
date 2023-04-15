@@ -2,6 +2,7 @@
 
 //based on https://inspirnathan.com/posts/47-shadertoy-tutorial-part-1/
 //see more info about shaders here --> https://github.com/TechnoLukas/My-favourite-shaders-links
+//on shadertoy https://www.shadertoy.com/view/mddSW2
 
 shader_type canvas_item;
 

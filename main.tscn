@@ -1,8 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://dqqxtntq4v46n"]
+[gd_scene load_steps=17 format=3 uid="uid://dqqxtntq4v46n"]
 
 [ext_resource type="Shader" path="res://shaders/shader_No1_Small.gdshader" id="1_50gw8"]
 [ext_resource type="Script" path="res://changescene.gd" id="1_fjke5"]
 [ext_resource type="Shader" path="res://shaders/shader_No4_Small.gdshader" id="3_u1fnb"]
+[ext_resource type="Shader" path="res://shaders/shader_No2.gdshader" id="3_vu2bl"]
+[ext_resource type="Script" path="res://mousepos.gd" id="4_00kps"]
 [ext_resource type="Shader" path="res://shaders/shader_No5_Small.gdshader" id="4_7x0bs"]
 
 [sub_resource type="Theme" id="Theme_bhqtq"]
@@ -21,6 +23,10 @@ shader = ExtResource("1_50gw8")
 [sub_resource type="CanvasTexture" id="CanvasTexture_qkgb5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ja7cp"]
+shader = ExtResource("3_vu2bl")
+shader_parameter/mousepos = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ikx65"]
 shader = ExtResource("3_u1fnb")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_u1lat"]
@@ -119,9 +125,51 @@ position = Vector2(170.625, 192.625)
 scale = Vector2(294.75, 198.75)
 texture = SubResource("CanvasTexture_qkgb5")
 
-[node name="button2" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer"]
+[node name="button2" type="ColorRect" parent="ColorRect/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+color = Color(0.109804, 0.109804, 0.109804, 1)
+
+[node name="titlebar" type="ColorRect" parent="ColorRect/VBoxContainer/HBoxContainer/button2"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 80.0
+grow_horizontal = 2
+color = Color(0.133333, 0.133333, 0.133333, 1)
+
+[node name="title" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer/button2/titlebar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "No02_WhiteRectMouse"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect/VBoxContainer/HBoxContainer/button2"]
+material = SubResource("ShaderMaterial_ja7cp")
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 80.0
+offset_bottom = 424.0
+grow_horizontal = 2
+script = ExtResource("4_00kps")
+
+[node name="button" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer/button2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_vjlwb")
+script = ExtResource("1_fjke5")
+scene = "res://scenes/No02_WhiteRectMouse.tscn"
 
 [node name="button3" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -153,7 +201,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ColorRect" type="ColorRect" parent="ColorRect/VBoxContainer/HBoxContainer/button4"]
-material = SubResource("ShaderMaterial_ja7cp")
+material = SubResource("ShaderMaterial_ikx65")
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -277,8 +325,9 @@ offset_right = 221.0
 offset_bottom = 36.0
 size_flags_horizontal = 4
 theme = SubResource("Theme_bnp8s")
-text = "release date: 13.04.2023"
+text = "release date: 15.04.2023"
 
 [connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/button1/button" to="ColorRect/VBoxContainer/HBoxContainer/button1/button" method="_on_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/button2/button" to="ColorRect/VBoxContainer/HBoxContainer/button2/button" method="_on_pressed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/button4/button" to="ColorRect/VBoxContainer/HBoxContainer/button4/button" method="_on_pressed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/button5/button" to="ColorRect/VBoxContainer/HBoxContainer/button5/button" method="_on_pressed"]
