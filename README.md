@@ -11,9 +11,9 @@ Added shader with mouse input (No02_WhiteRectMouse)
 
 shadertoy -> https://www.shadertoy.com/view/dsdSW2
 
-![](images\No02_WhiteRectMouse.gif)
+![](images/No02_WhiteRectMouse.gif)
 
-![](images\No02_WhiteRectMouse_Big.gif)
+![](images/No02_WhiteRectMouse_Big.gif)
 
 ## Added on 13.4.2023
 
