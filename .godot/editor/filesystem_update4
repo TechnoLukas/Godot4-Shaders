@@ -4,10 +4,8 @@ res://main.tscn
 res://scenes/No01_CircleBlur.tscn
 res://scenes/No04_ColorCirclePop.tscn
 res://scenes/No05_CircleColorSlide.tscn
-res://mousepos.gd
-res://shaders/shader_No1_Big.gdshader
-res://shaders/shader_No1_Small.gdshader
-res://shaders/shader_No4_Big.gdshader
-res://shaders/shader_No4_Small.gdshader
-res://shaders/shader_No5_Big.gdshader
+res://shader_No6_Big.gdshader
+res://scenes/No06_RedSquare.tscn
+res://shaders/shader_No6_Big.gdshader
+res://shaders/shader_No6_Small.gdshader
 res://shaders/shader_No5_Small.gdshader

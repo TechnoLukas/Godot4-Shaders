@@ -5,6 +5,14 @@ web: https://gotm.io/lukinggames/godot4shaders
 https://github.com/TechnoLukas/Godot4-Shaders
 Here i will add and commit step by step procces of creating Godot shaders.
 
+## Added on 16.4.2023
+
+Added new shader. (No06_RedSquare)
+
+![](images/No06_RedSquare.gif)
+
+![](images/No06_RedSquare.png)
+
 ## Added on 15.4.2023
 
 Added shader with mouse input (No02_WhiteRectMouse)
