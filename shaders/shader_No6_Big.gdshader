@@ -1,4 +1,9 @@
 //No06_RedSquare
+
+//based on https://inspirnathan.com/posts/47-shadertoy-tutorial-part-1/
+//see more info about shaders here --> https://github.com/TechnoLukas/My-favourite-shaders-links
+//on shadertoy https://www.shadertoy.com/view/dstXW2
+
 shader_type canvas_item;
 vec3 sdfSquare(vec2 uv, float size, vec2 offset) {
   float x = uv.x - offset.x;

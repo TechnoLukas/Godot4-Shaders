@@ -9,3 +9,8 @@ res://scenes/No06_RedSquare.tscn
 res://shaders/shader_No6_Big.gdshader
 res://shaders/shader_No6_Small.gdshader
 res://shaders/shader_No5_Small.gdshader
+res://shaders/shader_No1_Small.gdshader
+res://shaders/shader_No1_Big.gdshader
+res://shaders/shader_No4_Big.gdshader
+res://shaders/shader_No5_Big.gdshader
+res://shaders/shader_No4_Small.gdshader
