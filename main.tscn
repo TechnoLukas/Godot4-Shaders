@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cq76nmn3vp6vi"]
+[gd_scene load_steps=19 format=3 uid="uid://cq76nmn3vp6vi"]
 
 [ext_resource type="Shader" path="res://shaders/shader_No1_Small.gdshader" id="1_50gw8"]
 [ext_resource type="Script" path="res://changescene.gd" id="1_fjke5"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://mousepos.gd" id="4_00kps"]
 [ext_resource type="Shader" path="res://shaders/shader_No5_Small.gdshader" id="4_7x0bs"]
 [ext_resource type="Shader" path="res://shaders/shader_No6_Small.gdshader" id="7_pb5w1"]
+[ext_resource type="Shader" path="res://shaders/shader_No7_Small.gdshader" id="8_plcd6"]
 
 [sub_resource type="Theme" id="Theme_bhqtq"]
 
@@ -30,6 +31,9 @@ shader = ExtResource("4_7x0bs")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rlwr2"]
 shader = ExtResource("7_pb5w1")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_26nva"]
+shader = ExtResource("8_plcd6")
 
 [sub_resource type="Theme" id="Theme_bnp8s"]
 Label/font_sizes/font_size = 18
@@ -263,7 +267,7 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 40
 
-[node name="button1" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer2"]
+[node name="button1" type="ColorRect" parent="ColorRect/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -307,9 +311,49 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_vjlwb")
 script = ExtResource("1_fjke5")
 scene = "res://scenes/No06_RedSquare.tscn"
 
-[node name="button2" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer2"]
+[node name="button2" type="ColorRect" parent="ColorRect/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="titlebar" type="ColorRect" parent="ColorRect/VBoxContainer/HBoxContainer2/button2"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 80.0
+grow_horizontal = 2
+color = Color(0.133333, 0.133333, 0.133333, 1)
+
+[node name="title" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer2/button2/titlebar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "No07_RedSquareRotating"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect/VBoxContainer/HBoxContainer2/button2"]
+material = SubResource("ShaderMaterial_26nva")
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 80.0
+offset_bottom = 424.0
+grow_horizontal = 2
+
+[node name="button" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer2/button2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_vjlwb")
+script = ExtResource("1_fjke5")
+scene = "res://scenes/No07_RedSquareRotating.tscn"
 
 [node name="button3" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -357,10 +401,11 @@ offset_right = 221.0
 offset_bottom = 36.0
 size_flags_horizontal = 4
 theme = SubResource("Theme_bnp8s")
-text = "release date: 15.04.2023"
+text = "release date: 17.04.2023"
 
 [connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/button1/button" to="ColorRect/VBoxContainer/HBoxContainer/button1/button" method="_on_pressed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/button2/button" to="ColorRect/VBoxContainer/HBoxContainer/button2/button" method="_on_pressed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/button4/button" to="ColorRect/VBoxContainer/HBoxContainer/button4/button" method="_on_pressed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/button5/button" to="ColorRect/VBoxContainer/HBoxContainer/button5/button" method="_on_pressed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer2/button1/button" to="ColorRect/VBoxContainer/HBoxContainer2/button1/button" method="_on_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer2/button2/button" to="ColorRect/VBoxContainer/HBoxContainer2/button2/button" method="_on_pressed"]
