@@ -5,6 +5,17 @@ web: https://gotm.io/lukinggames/godot4shaders
 https://github.com/TechnoLukas/Godot4-Shaders
 Here i will add and commit step by step procces of creating Godot shaders.
 
+## Added on 21.4.2023
+
+Added new shader (No08_RedSquareFlying)
+
+shadertoy: https://www.shadertoy.com/view/dddXW2
+
+![](images/No08_RedSquareFlying1.gif)
+
+![](images/No08_RedSquareFlying1.gif)
+
+
 ## Added on 17.4.2023
 
 Added new shader (No07_RedSquareRotating)
