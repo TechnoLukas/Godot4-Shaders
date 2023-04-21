@@ -13,8 +13,7 @@ shadertoy: https://www.shadertoy.com/view/dddXW2
 
 ![](images/No08_RedSquareFlying1.gif)
 
-![](images/No08_RedSquareFlying1.gif)
-
+![](images/No08_RedSquareFlying2.gif)
 
 ## Added on 17.4.2023
 
