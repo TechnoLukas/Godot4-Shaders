@@ -7,6 +7,16 @@ Here i will add and commit step by step procces of creating Godot shaders.
 
 ## Added on 21.4.2023
 
+Added new shader (No09_GradientWhiteBlack)
+
+shadertoy: https://www.shadertoy.com/view/dsdXW2
+
+![](images/No09_GradientWhiteBlack.gif)
+
+![](images/No09_GradientWhiteBlack.png)
+
+## Added on 21.4.2023
+
 Added new shader (No08_RedSquareFlying)
 
 shadertoy: https://www.shadertoy.com/view/dddXW2
