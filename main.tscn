@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cq76nmn3vp6vi"]
+[gd_scene load_steps=25 format=3 uid="uid://cq76nmn3vp6vi"]
 
 [ext_resource type="Shader" path="res://shaders/shader_No1_Small.gdshader" id="1_50gw8"]
 [ext_resource type="Script" path="res://changescene.gd" id="1_fjke5"]
@@ -10,6 +10,7 @@
 [ext_resource type="Shader" path="res://shaders/shader_No7_Small.gdshader" id="8_plcd6"]
 [ext_resource type="Shader" path="res://shaders/shader_No8_Small.gdshader" id="9_oqkag"]
 [ext_resource type="Shader" path="res://shaders/shader_No9_Small.gdshader" id="10_lxv0p"]
+[ext_resource type="Shader" path="res://shaders/shader_No10_Small.gdshader" id="11_yvgph"]
 
 [sub_resource type="Theme" id="Theme_bhqtq"]
 
@@ -42,6 +43,9 @@ shader = ExtResource("9_oqkag")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ipifg"]
 shader = ExtResource("10_lxv0p")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5k38k"]
+shader = ExtResource("11_yvgph")
 
 [sub_resource type="Theme" id="Theme_bnp8s"]
 Label/font_sizes/font_size = 18
@@ -451,9 +455,50 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_vjlwb")
 script = ExtResource("1_fjke5")
 scene = "res://scenes/No09_GradientWhiteBlack.tscn"
 
-[node name="button5" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer2"]
+[node name="button5" type="ColorRect" parent="ColorRect/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
+color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+
+[node name="titlebar" type="ColorRect" parent="ColorRect/VBoxContainer/HBoxContainer2/button5"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 80.0
+grow_horizontal = 2
+color = Color(0.133333, 0.133333, 0.133333, 1)
+
+[node name="title" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer2/button5/titlebar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "No10_GradientChanging"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect/VBoxContainer/HBoxContainer2/button5"]
+material = SubResource("ShaderMaterial_5k38k")
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 80.0
+offset_bottom = 424.0
+grow_horizontal = 2
+
+[node name="button" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer2/button5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_vjlwb")
+script = ExtResource("1_fjke5")
+scene = "res://scenes/No10_GradientChanging.tscn"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="ColorRect/VBoxContainer"]
 y_sort_enabled = true
@@ -499,3 +544,4 @@ text = "release date: 21.04.2023"
 [connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer2/button2/button" to="ColorRect/VBoxContainer/HBoxContainer2/button2/button" method="_on_pressed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer2/button3/button" to="ColorRect/VBoxContainer/HBoxContainer2/button3/button" method="_on_pressed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer2/button4/button" to="ColorRect/VBoxContainer/HBoxContainer2/button4/button" method="_on_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer2/button5/button" to="ColorRect/VBoxContainer/HBoxContainer2/button5/button" method="_on_pressed"]
