@@ -5,7 +5,7 @@ web: https://gotm.io/lukinggames/godot4shaders
 https://github.com/TechnoLukas/Godot4-Shaders
 Here i will add and commit step by step procces of creating Godot shaders.
 
-## Added on 26.4.2023
+## Added on 30.4.2023
 
 Added new shader (No10_GradientChanging)
 
