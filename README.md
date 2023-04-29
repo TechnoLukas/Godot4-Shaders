@@ -9,6 +9,16 @@ Here i will add and commit step by step procces of creating Godot shaders.
 
 Added new shader (No10_GradientChanging)
 
+shadertoy: https://www.shadertoy.com/view/msdSW2
+
+![](images/No03_WhiteCrossMouse.gif)
+
+![](images/No03_WhiteCrossMouse2.gif)
+
+## Added on 26.4.2023
+
+Added new shader (No10_GradientChanging)
+
 shadertoy: https://www.shadertoy.com/view/msdXW2
 
 ![](images/No10_GradientChanging.gif)

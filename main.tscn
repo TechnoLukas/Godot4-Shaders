@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cq76nmn3vp6vi"]
+[gd_scene load_steps=27 format=3 uid="uid://cq76nmn3vp6vi"]
 
 [ext_resource type="Shader" path="res://shaders/shader_No1_Small.gdshader" id="1_50gw8"]
 [ext_resource type="Script" path="res://changescene.gd" id="1_fjke5"]
@@ -6,6 +6,7 @@
 [ext_resource type="Shader" path="res://shaders/shader_No2.gdshader" id="3_vu2bl"]
 [ext_resource type="Script" path="res://mousepos.gd" id="4_00kps"]
 [ext_resource type="Shader" path="res://shaders/shader_No5_Small.gdshader" id="4_7x0bs"]
+[ext_resource type="Shader" path="res://shaders/shader_No3.gdshader" id="5_xpttt"]
 [ext_resource type="Shader" path="res://shaders/shader_No6_Small.gdshader" id="7_pb5w1"]
 [ext_resource type="Shader" path="res://shaders/shader_No7_Small.gdshader" id="8_plcd6"]
 [ext_resource type="Shader" path="res://shaders/shader_No8_Small.gdshader" id="9_oqkag"]
@@ -24,7 +25,11 @@ bg_color = Color(0, 0, 0, 0.184314)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ja7cp"]
 shader = ExtResource("3_vu2bl")
-shader_parameter/mousepos = null
+shader_parameter/iMouse = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ey1ff"]
+shader = ExtResource("5_xpttt")
+shader_parameter/iMouse = null
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ikx65"]
 shader = ExtResource("3_u1fnb")
@@ -179,9 +184,51 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_vjlwb")
 script = ExtResource("1_fjke5")
 scene = "res://scenes/No02_WhiteRectMouse.tscn"
 
-[node name="button3" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer"]
+[node name="button3" type="ColorRect" parent="ColorRect/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+color = Color(0.0627451, 0.0627451, 0.0627451, 1)
+
+[node name="titlebar" type="ColorRect" parent="ColorRect/VBoxContainer/HBoxContainer/button3"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 80.0
+grow_horizontal = 2
+color = Color(0.133333, 0.133333, 0.133333, 1)
+
+[node name="title" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer/button3/titlebar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "No03_WhiteCrossMouse"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect/VBoxContainer/HBoxContainer/button3"]
+material = SubResource("ShaderMaterial_ey1ff")
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 80.0
+offset_bottom = 424.0
+grow_horizontal = 2
+script = ExtResource("4_00kps")
+
+[node name="button" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer/button3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_vjlwb")
+script = ExtResource("1_fjke5")
+scene = "res://scenes/No03_WhiteCrossMouse.tscn"
 
 [node name="button4" type="ColorRect" parent="ColorRect/VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -534,10 +581,11 @@ offset_right = 221.0
 offset_bottom = 36.0
 size_flags_horizontal = 4
 theme = SubResource("Theme_bnp8s")
-text = "release date: 21.04.2023"
+text = "release date: 29.04.2023"
 
 [connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/button1/button" to="ColorRect/VBoxContainer/HBoxContainer/button1/button" method="_on_pressed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/button2/button" to="ColorRect/VBoxContainer/HBoxContainer/button2/button" method="_on_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/button3/button" to="ColorRect/VBoxContainer/HBoxContainer/button3/button" method="_on_pressed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/button4/button" to="ColorRect/VBoxContainer/HBoxContainer/button4/button" method="_on_pressed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/button5/button" to="ColorRect/VBoxContainer/HBoxContainer/button5/button" method="_on_pressed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer2/button1/button" to="ColorRect/VBoxContainer/HBoxContainer2/button1/button" method="_on_pressed"]

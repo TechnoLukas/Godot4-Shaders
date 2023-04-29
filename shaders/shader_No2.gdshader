@@ -6,12 +6,12 @@
 
 shader_type canvas_item;
 
-uniform vec2 mousepos;
+uniform vec2 iMouse;
 
 void fragment() {
 	vec2 uv = UV;
-	if(mousepos.x<uv.x && mousepos.y>uv.y)
-		COLOR=vec4(1,1,1,1);
+	if(uv.x>iMouse.x && uv.y<iMouse.y)
+		COLOR=vec4(1.,1.,1.,1.);
 	else
-		COLOR=vec4(0,0,0,1);
+		COLOR=vec4(0.,0.,0.,1.);
 }

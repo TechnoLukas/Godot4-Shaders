@@ -9,7 +9,7 @@ bg_color = Color(0.564706, 0, 0.0117647, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q21fh"]
 shader = ExtResource("3_nhiip")
-shader_parameter/mousepos = null
+shader_parameter/iMouse = null
 
 [node name="Control" type="Control"]
 layout_mode = 3

@@ -1,0 +1,80 @@
+[gd_scene load_steps=6 format=3 uid="uid://c3b7i5r767upu"]
+
+[ext_resource type="Script" path="res://mousepos.gd" id="1_3qweg"]
+[ext_resource type="Script" path="res://changescene.gd" id="2_xbcos"]
+[ext_resource type="Shader" path="res://shaders/shader_No3.gdshader" id="3_8u0lk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eg16j"]
+bg_color = Color(0.564706, 0, 0.0117647, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b7cld"]
+shader = ExtResource("3_8u0lk")
+shader_parameter/iMouse = null
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3qweg")
+sprite = "ColorRect/ColorRect"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.196078, 0.196078, 0.196078, 1)
+
+[node name="titlebar" type="ColorRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 80.0
+grow_horizontal = 2
+color = Color(0.133333, 0.133333, 0.133333, 1)
+
+[node name="title" type="Label" parent="ColorRect/titlebar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "No02_WhiteRectMouse"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="Button" parent="ColorRect/titlebar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -70.0
+offset_top = -30.0
+offset_right = -10.0
+offset_bottom = 30.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_eg16j")
+script = ExtResource("2_xbcos")
+scene = "res://main.tscn"
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+material = SubResource("ShaderMaterial_b7cld")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="ColorRect/titlebar/ColorRect" to="ColorRect/titlebar/ColorRect" method="_on_pressed" flags=18]
