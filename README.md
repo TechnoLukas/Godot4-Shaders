@@ -7,6 +7,16 @@ Here i will add and commit step by step procces of creating Godot shaders.
 
 ## Added on 30.4.2023
 
+Added new shader (No11_BlueCircle)
+
+shadertoy: https://www.shadertoy.com/view/ddtSD2
+
+![](images/No11_BlueCircle.gif)
+
+![](images/No11_BlueCircle.png)
+
+## Added on 29.4.2023
+
 Added new shader (No10_GradientChanging)
 
 shadertoy: https://www.shadertoy.com/view/msdSW2
