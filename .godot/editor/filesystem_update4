@@ -1,11 +1,9 @@
-res://scenes/No12_ShapesCombine.tscn
+res://scenes/No14_GradientMergedShapes.tscn
 res://shaders/shader_No2.gdshader
-res://main.tscn
-res://scenes/No13_GradientShapesCombine.tscn
-res://shaders/shader_No13_Big.gdshader
 res://shaders/shader_No13_Small.gdshader
-res://shaders/shader_No12_Small.gdshader
-res://shaders/shader_No12_Big.gdshader
+res://shaders/shader_No14_Big.gdshader
+res://main.tscn
+res://shaders/shader_No14_Small.gdshader
 res://scenes/No01_CircleBlur.tscn
 res://scenes/No04_ColorCirclePop.tscn
 res://scenes/No05_CircleColorSlide.tscn
@@ -17,3 +15,5 @@ res://scenes/No09_GradientWhiteBlack.tscn
 res://scenes/No10_GradientChanging.tscn
 res://scenes/No03_WhiteCrossMouse.tscn
 res://scenes/No11_BlueCircle.tscn
+res://scenes/No12_ShapesCombine.tscn
+res://scenes/No13_GradientShapesCombine.tscn

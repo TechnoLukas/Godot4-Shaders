@@ -5,6 +5,16 @@ web: https://gotm.io/lukinggames/godot4shaders
 https://github.com/TechnoLukas/Godot4-Shaders
 Here i will add and commit step by step procces of creating Godot shaders.
 
+## Added on 05.5.2023
+
+Added new shader (No14_GradientMergedShapes)
+
+shadertoy: https://www.shadertoy.com/view/mddSD2
+
+![](images/No14_GradientMergedShapes.gif)
+
+![](images/No14_GradientMergedShapes.png)
+
 ## Added on 03.5.2023
 
 Added new shader (No13_GradientShapesCombine)
