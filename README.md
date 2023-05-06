@@ -5,6 +5,18 @@ web: https://gotm.io/lukinggames/godot4shaders
 https://github.com/TechnoLukas/Godot4-Shaders
 Here i will add and commit step by step procces of creating Godot shaders.
 
+# FINISHED! 🎉
+
+## Added on 06.5.2023
+
+Added new shader (No15_HalfCircle)
+
+shadertoy: https://www.shadertoy.com/view/dsdSD2
+
+![](images/No15_HalfCircle.gif)
+
+![](images/No15_HalfCircle.png)
+
 ## Added on 05.5.2023
 
 Added new shader (No14_GradientMergedShapes)

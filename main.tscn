@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://cq76nmn3vp6vi"]
+[gd_scene load_steps=37 format=3 uid="uid://cq76nmn3vp6vi"]
 
 [ext_resource type="Shader" path="res://shaders/shader_No1_Small.gdshader" id="1_50gw8"]
 [ext_resource type="Script" path="res://changescene.gd" id="1_fjke5"]
@@ -16,6 +16,7 @@
 [ext_resource type="Shader" path="res://shaders/shader_No12_Small.gdshader" id="14_py5dq"]
 [ext_resource type="Shader" path="res://shaders/shader_No13_Small.gdshader" id="15_62qs6"]
 [ext_resource type="Shader" path="res://shaders/shader_No14_Small.gdshader" id="16_m5s04"]
+[ext_resource type="Shader" path="res://shaders/shader_No15_Small.gdshader" id="17_cbcnb"]
 
 [sub_resource type="Theme" id="Theme_bhqtq"]
 
@@ -67,6 +68,9 @@ shader = ExtResource("15_62qs6")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rb3y0"]
 shader = ExtResource("16_m5s04")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vv3c6"]
+shader = ExtResource("17_cbcnb")
 
 [sub_resource type="Theme" id="Theme_bnp8s"]
 Label/font_sizes/font_size = 18
@@ -745,9 +749,49 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_vjlwb")
 script = ExtResource("1_fjke5")
 scene = "res://scenes/No14_GradientMergedShapes.tscn"
 
-[node name="button5" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer3"]
+[node name="button5" type="ColorRect" parent="ColorRect/VBoxContainer/HBoxContainer3"]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="titlebar" type="ColorRect" parent="ColorRect/VBoxContainer/HBoxContainer3/button5"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 80.0
+grow_horizontal = 2
+color = Color(0.133333, 0.133333, 0.133333, 1)
+
+[node name="title" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer3/button5/titlebar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "No15_HalfCircle"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect/VBoxContainer/HBoxContainer3/button5"]
+material = SubResource("ShaderMaterial_vv3c6")
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 80.0
+offset_bottom = 424.0
+grow_horizontal = 2
+
+[node name="button" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer3/button5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_vjlwb")
+script = ExtResource("1_fjke5")
+scene = "res://scenes/No15_HalfCircle.tscn"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
@@ -757,7 +801,7 @@ offset_right = 221.0
 offset_bottom = 36.0
 size_flags_horizontal = 4
 theme = SubResource("Theme_bnp8s")
-text = "release date: 05.05.2023"
+text = "release date: 06.05.2023"
 
 [connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/button1/button" to="ColorRect/VBoxContainer/HBoxContainer/button1/button" method="_on_pressed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/button2/button" to="ColorRect/VBoxContainer/HBoxContainer/button2/button" method="_on_pressed"]
@@ -773,3 +817,4 @@ text = "release date: 05.05.2023"
 [connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer3/button2/button" to="ColorRect/VBoxContainer/HBoxContainer3/button2/button" method="_on_pressed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer3/button3/button" to="ColorRect/VBoxContainer/HBoxContainer3/button3/button" method="_on_pressed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer3/button4/button" to="ColorRect/VBoxContainer/HBoxContainer3/button4/button" method="_on_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer3/button5/button" to="ColorRect/VBoxContainer/HBoxContainer3/button5/button" method="_on_pressed"]
